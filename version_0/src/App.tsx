@@ -8,7 +8,6 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './components/ProtectedRoute';
-import GovernmentPage from './GovernmentPage';
 
 const CLERK_PUBLISHABLE_KEY = 'pk_test_bmV4dC13YXJ0aG9nLTc4LmNsZXJrLmFjY291bnRzLmRldiQ';
 
@@ -32,7 +31,6 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="/government" element={<GovernmentPage />} />
           </Routes>
         </div>
       </Router>
