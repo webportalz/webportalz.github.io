@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const GovernmentPage = () => {
   const tiles = ['Roads', 'Stoplights', 'Streetlights', 'ATMs', 'Pollution'];
+  const navigate = useNavigate(); // Initialize navigate function
 
   const handleClick = (tile: string) => {
-    console.log(`${tile} button clicked`);
+    navigate(`/${tile.toLowerCase()}-forum`); // Navigate to the corresponding forum
   };
 
   return (
@@ -43,7 +45,7 @@ const GovernmentPage = () => {
               e.currentTarget.style.backgroundColor = '#f9f9f9';
               e.currentTarget.style.color = 'black';
             }}
-            onClick={() => handleClick(tile)}
+            onClick={() => handleClick(tile)} // Navigate on click
           >
             {tile}
           </button>
